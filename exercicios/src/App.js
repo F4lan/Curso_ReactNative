@@ -59,7 +59,7 @@ export default () => (
     <DigiteNome />
     <FlexboxV1 />
   */}
-    <Mega qtdeNumeros={"7"} />
+    <Mega qtdeNumeros={7} />
   </SafeAreaView>
 )
 
