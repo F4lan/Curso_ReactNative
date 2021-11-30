@@ -4,6 +4,7 @@ const db = require('./config/db')
 const consign = require('consign')
 
 consign()
+    .include('./config/passaport.js')
     .then('./config/midlewares.js')
     .then('./api')
     .then('./config/routes.js')
