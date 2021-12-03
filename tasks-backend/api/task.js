@@ -11,10 +11,12 @@ module.exports = app => {
             .where('estimateAt', '<=', date)
             .orderBy('estimateAt')
             .then(tasks => res.json(tasks))
-            .catch(err => res.status(500).json(err))
+            .catch(err => res.status(400).json(err))
     }
 
     const save = (req, res) => {
+        console.log(req.body)
+        
         if (!req.body.desc.trim()) {
             return res.status(400).send('Descrição é um campo obrigatorio!')
         }
