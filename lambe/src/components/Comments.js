@@ -18,7 +18,7 @@ class Comments extends Component {
                         key={index}
                     >
                         <Text style={styles.nickname}>
-                            {item.nickname}:
+                            {item.nickname}:  
                         </Text>
                         <Text style={styles.comment}>
                             {item.comment}

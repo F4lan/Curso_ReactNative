@@ -6,6 +6,7 @@ import {
     Dimensions,
     Text
 } from 'react-native'
+import { connect } from "react-redux";
 
 import Author from "./Author";
 import Comments from "./Comments";
@@ -13,24 +14,37 @@ import AddComent from "./AddComment"
 
 class Post extends Component {
     render() {
+        const addComent = this.props.name
+            ? <AddComent postId={this.props.id} />
+            : null
+
         return (
             <View style={styles.container}>
                 <Image
-                    source={this.props.image}
+                    source={{ uri: this.props.image.uri }}
                     style={styles.image}
                 />
                 <Author
-                    email='fulano@gmail.com'
-                    nickname='teste'
+                    email={this.props.email}
+                    nickname={this.props.nickname}
                 />
                 <Comments
                     comments={this.props.comments}
                 />
-                <AddComent />
+                {addComent}
             </View>
         )
     }
 }
+
+const mapStateToProps = ({ user }) => {
+    return {
+        name: user.name
+    }
+}
+
+export default connect(mapStateToProps, null)(Post)
+// export default Post
 
 const styles = StyleSheet.create({
     container: {
@@ -42,5 +56,3 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     },
 })
-
-export default Post
