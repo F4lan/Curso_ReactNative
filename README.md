@@ -1,12 +1,12 @@
 # Curso_ReactNative
 Curso de ReactNative afim de aprimorar conhecimentos (COD3R)
 
-<h3 align="center">
+<h3>
   Tema do curso:
 </h3>
 Aprenda os fundamentos de React Native, boas práticas e construa várias aplicações nativas para Android e iOS usando JS!
 
-<h3 align="center">
+<h3>
   O que foi desenvolvido com este curso?
 </h3>
 
@@ -26,7 +26,7 @@ Aprenda os fundamentos de React Native, boas práticas e construa várias aplica
 
 -> Integrar a aplicação com banco NoSQL, utilizando o Firebase
 
-<h3 align="center">
+<h3>
   Resumo dos Projetos realizados:
 </h3>
 
